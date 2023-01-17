@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		359726C82976229800C1A8CD /* RMGetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359726C72976229800C1A8CD /* RMGetAllCharactersResponse.swift */; };
+		359726CA2976243F00C1A8CD /* RMCharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359726C92976243F00C1A8CD /* RMCharacterListViewModel.swift */; };
+		359726CC2976249900C1A8CD /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359726CB2976249900C1A8CD /* CharacterListView.swift */; };
+		359726CF297624DB00C1A8CD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 359726CE297624DB00C1A8CD /* SnapKit */; };
+		359726D12976270000C1A8CD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359726D02976270000C1A8CD /* Extensions.swift */; };
+		359726D329762A7B00C1A8CD /* RMCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359726D229762A7B00C1A8CD /* RMCharacterCell.swift */; };
+		359726D529762C3900C1A8CD /* RMCharacterCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359726D429762C3900C1A8CD /* RMCharacterCollectionViewModel.swift */; };
 		35AADB26296B1ACA000BF20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AADB25296B1ACA000BF20C /* AppDelegate.swift */; };
 		35AADB28296B1ACA000BF20C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AADB27296B1ACA000BF20C /* SceneDelegate.swift */; };
 		35AADB2A296B1ACA000BF20C /* RMTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AADB29296B1ACA000BF20C /* RMTabViewController.swift */; };
@@ -27,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		359726C72976229800C1A8CD /* RMGetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGetAllCharactersResponse.swift; sourceTree = "<group>"; };
+		359726C92976243F00C1A8CD /* RMCharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterListViewModel.swift; sourceTree = "<group>"; };
+		359726CB2976249900C1A8CD /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		359726D02976270000C1A8CD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		359726D229762A7B00C1A8CD /* RMCharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterCell.swift; sourceTree = "<group>"; };
+		359726D429762C3900C1A8CD /* RMCharacterCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterCollectionViewModel.swift; sourceTree = "<group>"; };
 		35AADB22296B1ACA000BF20C /* Rick&Morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&Morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AADB25296B1ACA000BF20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35AADB27296B1ACA000BF20C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,12 +66,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359726CF297624DB00C1A8CD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		359726C52976227900C1A8CD /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				35AADB40296B1D9F000BF20C /* RMLocation.swift */,
+				35AADB42296B1DA9000BF20C /* RMCharacter.swift */,
+				35AADB44296B1DB3000BF20C /* RMEpisode.swift */,
+				35AADB55296B290D000BF20C /* RMOrigin.swift */,
+				35AADB57296B2957000BF20C /* RMSingleLocation.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		359726C62976228300C1A8CD /* ApiTypes */ = {
+			isa = PBXGroup;
+			children = (
+				359726C72976229800C1A8CD /* RMGetAllCharactersResponse.swift */,
+			);
+			path = ApiTypes;
+			sourceTree = "<group>";
+		};
 		35AADB19296B1ACA000BF20C = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +139,8 @@
 		35AADB3A296B1D18000BF20C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				35AADB40296B1D9F000BF20C /* RMLocation.swift */,
-				35AADB42296B1DA9000BF20C /* RMCharacter.swift */,
-				35AADB44296B1DB3000BF20C /* RMEpisode.swift */,
-				35AADB55296B290D000BF20C /* RMOrigin.swift */,
-				35AADB57296B2957000BF20C /* RMSingleLocation.swift */,
+				359726C62976228300C1A8CD /* ApiTypes */,
+				359726C52976227900C1A8CD /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +148,8 @@
 		35AADB3B296B1D1E000BF20C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				359726CB2976249900C1A8CD /* CharacterListView.swift */,
+				359726D229762A7B00C1A8CD /* RMCharacterCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +157,8 @@
 		35AADB3C296B1D24000BF20C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				359726C92976243F00C1A8CD /* RMCharacterListViewModel.swift */,
+				359726D429762C3900C1A8CD /* RMCharacterCollectionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +183,7 @@
 		35AADB3F296B1D36000BF20C /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				359726D02976270000C1A8CD /* Extensions.swift */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -180,6 +216,9 @@
 			dependencies = (
 			);
 			name = "Rick&Morty";
+			packageProductDependencies = (
+				359726CE297624DB00C1A8CD /* SnapKit */,
+			);
 			productName = "Rick&Morty";
 			productReference = 35AADB22296B1ACA000BF20C /* Rick&Morty.app */;
 			productType = "com.apple.product-type.application";
@@ -208,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 35AADB19296B1ACA000BF20C;
+			packageReferences = (
+				359726CD297624DB00C1A8CD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 35AADB23296B1ACA000BF20C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,17 +280,23 @@
 				35AADB58296B2957000BF20C /* RMSingleLocation.swift in Sources */,
 				35AADB4C296B1E45000BF20C /* RMSettingsViewController.swift in Sources */,
 				35AADB4A296B1E3E000BF20C /* RMLocationViewController.swift in Sources */,
+				359726C82976229800C1A8CD /* RMGetAllCharactersResponse.swift in Sources */,
 				35AADB45296B1DB3000BF20C /* RMEpisode.swift in Sources */,
 				35AADB4E296B1E6C000BF20C /* RMEpisodesViewController.swift in Sources */,
+				359726D12976270000C1A8CD /* Extensions.swift in Sources */,
 				35AADB2A296B1ACA000BF20C /* RMTabViewController.swift in Sources */,
 				35AADB48296B1E19000BF20C /* RMCharaterViewController.swift in Sources */,
 				35AADB26296B1ACA000BF20C /* AppDelegate.swift in Sources */,
 				35AADB50296B24E1000BF20C /* RMService.swift in Sources */,
+				359726CA2976243F00C1A8CD /* RMCharacterListViewModel.swift in Sources */,
+				359726CC2976249900C1A8CD /* CharacterListView.swift in Sources */,
 				35AADB28296B1ACA000BF20C /* SceneDelegate.swift in Sources */,
+				359726D329762A7B00C1A8CD /* RMCharacterCell.swift in Sources */,
 				35AADB54296B256A000BF20C /* RMEndpoint.swift in Sources */,
 				35AADB41296B1D9F000BF20C /* RMLocation.swift in Sources */,
 				35AADB52296B24F4000BF20C /* RMRequest.swift in Sources */,
 				35AADB43296B1DA9000BF20C /* RMCharacter.swift in Sources */,
+				359726D529762C3900C1A8CD /* RMCharacterCollectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		359726CD297624DB00C1A8CD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		359726CE297624DB00C1A8CD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 359726CD297624DB00C1A8CD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 35AADB1A296B1ACA000BF20C /* Project object */;
 }

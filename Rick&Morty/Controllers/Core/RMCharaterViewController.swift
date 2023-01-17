@@ -8,16 +8,17 @@
 import UIKit
 
 final class RMCharaterViewController: UIViewController {
+    
+    private let charactersList = CharacterListView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Characters"
+        view.addSubview(charactersList)
         
-        let request = RMRequest(endpoint: .character, path: ["1"],query: [
-            URLQueryItem(name: "name", value: "rick"),
-            URLQueryItem(name: "status", value: "alive")
-        ])
-        print(request.url)
+        charactersList.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
+        }
     }
 }
