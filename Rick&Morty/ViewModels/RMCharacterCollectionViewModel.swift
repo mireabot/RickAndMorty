@@ -19,7 +19,7 @@ final class RMCharacterCollectionViewModel {
     }
     
     public var characterStatusText: String {
-        return status.rawValue
+        return "Status: \(status.text)"
     }
     
     public func fecthImage(completion: @escaping(Result<Data, Error>) -> Void) {

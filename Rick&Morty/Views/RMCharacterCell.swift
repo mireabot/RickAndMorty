@@ -15,6 +15,8 @@ final class RMCharacterCell: UICollectionViewCell {
     private let characterImage: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleToFill
+        iv.clipsToBounds = true
+        
         return iv
     }()
     
@@ -40,6 +42,7 @@ final class RMCharacterCell: UICollectionViewCell {
         contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubViews(characterImage, characterNameLabel, characterStatusLabel)
         layout()
+        contentView.layer.cornerRadius = 10
     }
     
     required init?(coder: NSCoder) {
@@ -55,16 +58,16 @@ final class RMCharacterCell: UICollectionViewCell {
         }
         
         characterNameLabel.snp.makeConstraints { make in
-            make.height.equalTo(50)
-            make.left.equalToSuperview().offset(5)
-            make.right.equalToSuperview().offset(-5)
+            make.height.equalTo(30)
+            make.left.equalToSuperview().offset(7)
+            make.right.equalToSuperview().offset(-7)
             make.bottom.equalTo(characterStatusLabel.snp.top).offset(-3)
         }
         
         characterStatusLabel.snp.makeConstraints { make in
-            make.height.equalTo(50)
-            make.left.equalToSuperview().offset(5)
-            make.right.equalToSuperview().offset(-5)
+            make.height.equalTo(30)
+            make.left.equalToSuperview().offset(7)
+            make.right.equalToSuperview().offset(-7)
             make.bottom.equalToSuperview().offset(-3)
         }
     }
